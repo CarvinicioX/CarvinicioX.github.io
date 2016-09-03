@@ -38,3 +38,35 @@
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
 }
+
+.hoverMail {
+    height: 0;
+    width: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: auto;
+    background-color: darkviolet;
+    overflow-x: hidden;
+    padding: 0px;
+    transition: 0.25s;
+    visibility: hidden;
+}
+
+#footerv1 {
+    background-color: aqua;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+#player {
+    transition: margin-left 0.25s;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

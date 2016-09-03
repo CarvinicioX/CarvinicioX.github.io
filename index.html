@@ -11,7 +11,13 @@
         <script src="js/materialize.min.js"></script>
         <script src="js/mine.js"></script>
     </head>
-    <body style="background-image:url(background.jpg)">
+    <body style="background-image:url(images/background.jpg)">
+        <div id="sendMail" class="hoverMail">
+            <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+            </div>
+        </div>
         <div id="mySidenav" class="sidenav">
             <a href="#">About</a>
             <a href="#">Services</a>
@@ -25,10 +31,10 @@
                     <i class="material-icons">menu</i>
                 </a>
                 <ul>
-                    <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
-                    <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-                    <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-                    <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+                    <li><a onclick="email()" class="btn-floating red"><i class="material-icons">email</i></a></li>
+                    <li><a onclick="play()" class="btn-floating yellow darken-1"><i class="material-icons">play_arrow</i></a></li>
+                    <li><a onclick="publish()" class="btn-floating green"><i class="material-icons">publish</i></a></li>
+                    <li><a onclick="attach()" class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
                 </ul>
             </div>
             <div class="card-panel purple lighten-0">
@@ -45,6 +51,9 @@
                     Honduras
                 </address>
             </div>
+            <audio id="player" src="media/Nocturnal_Mayhem_-_01_-_I.mp3" controls>
+                Your browser does not support the audio element.
+            </audio>
         </div>
     </body>
 </html>
