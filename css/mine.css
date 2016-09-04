@@ -51,16 +51,10 @@
     margin: auto;
     background-color: darkviolet;
     overflow-x: hidden;
+    overflow-y: hidden;
     padding: 20px;
     transition: 0.25s;
     visibility: hidden;
-}
-
-#footerv1 {
-    transition: margin-left 0.25s;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 }
 
 #player {

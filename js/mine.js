@@ -6,7 +6,7 @@ function Nav() {
         document.getElementById("spanOpenClose").style.marginLeft = "175px";
         document.getElementById("sendMail").style.marginLeft = "175px";
         document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-        document.getElementById("navOpenCloseButton").innerHTML= "skip_previous";
+        document.getElementById("navOpenCloseButton").innerHTML = "skip_previous";
     } else if (document.getElementById("navOpenCloseButton").innerHTML.charAt(5) === 'p') {
         document.getElementById("mySidenav").style.width = "0";
         document.getElementById("main").style.marginLeft = "0";
@@ -23,7 +23,7 @@ function email() {
         document.getElementById("main").style.visibility = "visible";
         document.getElementById("sendMail").style.visibility = "hidden";
         document.getElementById("sendMail").style.height = "0";
-    } else if (document.getElementById("sendMail").style.visibility = "hidden") {
+    } else if (document.getElementById("sendMail").style.visibility === "hidden") {
         document.getElementById("main").style.visibility = "hidden";
         document.getElementById("sendMail").style.visibility = "visible";
         document.getElementById("sendMail").style.height = "450px";
@@ -41,10 +41,10 @@ function aboutMain() {
     }
 }
 
-function attach() {
-    
-}
-
-function sendMailHover() {
-    
+function send() {
+    window.open('mailto:' + $("#email_email").val() + '?subject=' + $("#email_subject").val() + '&body=' + $("#email_body").val());
+    $("#email_email").val("");
+    $("#email_name").val("");
+    $("#email_subject").val("");
+    $("#email_body").val("");
 }
