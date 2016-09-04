@@ -12,48 +12,62 @@
         <script src="js/mine.js"></script>
     </head>
     <body style="background-image:url(images/background.jpg)">
+        <span onclick="Nav()" id="spanOpenClose"><a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons" id="navOpenCloseButton">skip_next</i></a></span>
         <div id="sendMail" class="hoverMail">
-            <div class="input-field col s12">
-                <input id="email" type="email" class="validate">
-                <label for="email">Email</label>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="first_name" type="text" class="validate">
+                            <label for="first_name">First Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="last_name" type="text" class="validate">
+                            <label for="last_name">Last Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="email" type="email" class="validate">
+                            <label for="email" data-error="wrong" data-success="right">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                    <label for="textarea1">Textarea</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row">
+                        <a class="waves-effect waves-teal btn-flat">Send</a><a onclick="email()" class="waves-effect waves-teal btn-flat">Cancel</a>
+                    </div>
+                </form>
             </div>
         </div>
         <div id="mySidenav" class="sidenav">
-            <a href="#">About</a>
-            <a href="#">Services</a>
+            <a onclick="aboutMain()" href="#">About</a>
+            <a onclick="email()" href="#">Send eMail</a>
             <a href="#">Clients</a>
             <a href="#">Contact</a>
         </div>
-        <div id="main">
-            <span onclick="Nav()"><a class="waves-effect waves-ligth btn" id="navOpenCloseButton" >OPEN</a></span>
-            <div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
-                <a class="btn-floating btn-large red">
-                    <i class="material-icons">menu</i>
-                </a>
-                <ul>
-                    <li><a onclick="email()" class="btn-floating red"><i class="material-icons">email</i></a></li>
-                    <li><a onclick="play()" class="btn-floating yellow darken-1"><i class="material-icons">play_arrow</i></a></li>
-                    <li><a onclick="publish()" class="btn-floating green"><i class="material-icons">publish</i></a></li>
-                    <li><a onclick="attach()" class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
-                </ul>
-            </div>
-            <div class="card-panel purple lighten-0">
+        <br>
+        <div id="main" style="visibility:visible">
+            <div id="info" class="card-panel purple lighten-0">
                 <p style="text-align:center">Hello World!, my name is Carlos Guevara I'm an student in <abbr title="Universidad Tecnologica Centro Americana">Unitec</abbr> <abbr title="Honduras">Hn</abbr>, I'm coursing my fourth and hopely last year in Computer Science, the purpose of this page is just to practice web development.</p>
                 <p style="text-align:center">
                     You can check out my repositories with past projects (not all of them are complete tho), clicking here.
                     <a class="waves-effect waves-light btn" href="http://github.com/CarvinicioX" target="_blank"><i class="material-icons">open_in_new</i></a>
                 </p>
-                <address style="text-align:center">
-                    Written by Carlos Guevara.<br> 
-                    Visit me at:<br>
-                    <a href="https://carviniciox.github.io">https://carviniciox.github.io/</a><br>
-                    Valle del Zamorano, Francisco Morazan<br>
-                    Honduras
-                </address>
             </div>
+        </div>
+        <footer>
             <audio id="player" src="media/Nocturnal_Mayhem_-_01_-_I.mp3" controls>
                 Your browser does not support the audio element.
             </audio>
-        </div>
+        </footer>
     </body>
 </html>
